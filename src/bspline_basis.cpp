@@ -7,8 +7,8 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
 */
 
-#include "bsplinebasis.h"
-#include "mykroneckerproduct.h"
+#include "bspline_basis.h"
+#include "kronecker_product.h"
 #include "unsupported/Eigen/KroneckerProduct"
 
 #include <iostream>
@@ -398,16 +398,6 @@ unsigned int BSplineBasis::getKnotMultiplicity(unsigned int dim, double tau) con
     return bases.at(dim).knotMultiplicity(tau);
 }
 
-double BSplineBasis::getKnotValue(int dim, int index) const
-{
-    return bases.at(dim).getKnotValue(index);
-}
-
-unsigned int BSplineBasis::getLargestKnotInterval(unsigned int dim) const
-{
-    return bases.at(dim).indexLongestInterval();
-}
-
 std::vector<unsigned int> BSplineBasis::getNumBasisFunctionsTarget() const
 {
     std::vector<unsigned int> ret;
@@ -432,7 +422,7 @@ bool BSplineBasis::insideSupport(const DenseVector &x) const
 {
     for (unsigned int dim = 0; dim < numVariables; dim++)
     {
-        if (!bases.at(dim).insideSupport(x(dim)))
+        if (!bases.at(dim).is_supported(x(dim)))
         {
             return false;
         }

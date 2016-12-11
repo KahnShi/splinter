@@ -7,11 +7,11 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
 */
 
-#ifndef SPLINTER_BSPLINEBASIS_H
-#define SPLINTER_BSPLINEBASIS_H
+#ifndef SPLINTER_BSPLINE_BASIS_H
+#define SPLINTER_BSPLINE_BASIS_H
 
 #include "definitions.h"
-#include "bsplinebasis1d.h"
+#include "bspline_basis_1d.h"
 
 namespace SPLINTER
 {
@@ -46,9 +46,7 @@ public:
     unsigned int getNumBasisFunctions(unsigned int dim) const;
     std::vector<unsigned int> getNumBasisFunctionsTarget() const;
 
-    double getKnotValue(int dim, int index) const;
     unsigned int getKnotMultiplicity(unsigned int dim, double tau) const;
-    unsigned int getLargestKnotInterval(unsigned int dim) const;
 
     int supportedPrInterval() const;
 
@@ -69,4 +67,4 @@ private:
 
 } // namespace SPLINTER
 
-#endif // SPLINTER_BSPLINEBASIS_H
+#endif // SPLINTER_BSPLINE_BASIS_H

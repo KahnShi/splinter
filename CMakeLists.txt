@@ -146,37 +146,39 @@ set(CINTERFACE_SRC_LIST
     include/cinterface/cinterface.h
     include/cinterface/utilities.h
     src/cinterface/bspline.cpp
-    src/cinterface/bsplinebuilder.cpp
+    src/cinterface/bspline_builder.cpp
     src/cinterface/cinterface.cpp
-    src/cinterface/datatable.cpp
+    src/cinterface/data_table.cpp
     src/cinterface/utilities.cpp
 )
 # These are the sources we need for compilation of the library
 set(SRC_LIST
     ${CINTERFACE_SRC_LIST}
     include/bspline.h
-    include/bsplinebasis.h
-    include/bsplinebasis1d.h
-    include/knots.h
-    include/bsplinebuilder.h
-    include/datapoint.h
-    include/datatable.h
+    include/bspline_basis.h
+    include/bspline_basis_1d.h
+    include/knot_utils.h
+    include/knot_vector.h
+    include/bspline_builder.h
+    include/data_point.h
+    include/data_table.h
     include/function.h
     include/definitions.h
-    include/linearsolvers.h
-    include/mykroneckerproduct.h
+    include/linear_solvers.h
+    include/kronecker_product.h
     include/serializer.h
     include/utilities.h
     include/saveable.h
     src/bspline.cpp
-    src/bsplinebasis.cpp
-    src/bsplinebasis1d.cpp
-    src/knots.cpp
-    src/bsplinebuilder.cpp
-    src/datapoint.cpp
-    src/datatable.cpp
+    src/bspline_basis.cpp
+    src/bspline_basis_1d.cpp
+    src/knot_utils.cpp
+    src/knot_vector.cpp
+    src/bspline_builder.cpp
+    src/data_point.cpp
+    src/data_table.cpp
     src/function.cpp
-    src/mykroneckerproduct.cpp
+    src/kronecker_product.cpp
     src/serializer.cpp
     src/utilities.cpp
 )
@@ -186,23 +188,24 @@ set(TEST_SRC_LIST
     test/approximation/bspline.cpp
     test/approximation/pspline.cpp
     test/general/bspline.cpp
-    test/general/datatable.cpp
+    test/general/data_table.cpp
     test/general/utilities.cpp
-    test/serialization/datatable.cpp
+    test/serialization/data_table.cpp
     test/serialization/bspline.cpp
-    test/operatoroverloads.h
-    test/operatoroverloads.cpp
-    test/testfunction.h
-    test/testfunction.cpp
-    test/testfunctions.h
-    test/testfunctions.cpp
-    test/testingutilities.h
-    test/testingutilities.cpp
-    test/bsplinetestingutilities.h
-    test/bsplinetestingutilities.cpp
+    test/op_overloads.h
+    test/op_overloads.cpp
+    test/test_function.h
+    test/test_function.cpp
+    test/test_functions.h
+    test/test_functions.cpp
+    test/test_utils.h
+    test/test_utils.cpp
+    test/bspline_test_utils.h
+    test/bspline_test_utils.cpp
     test/serialization/eigentypes.cpp
-    test/unit/bsplinebasis1d.cpp
-    test/unit/knots.cpp)
+    test/unit/bspline_basis_1d.cpp
+    test/unit/knots.cpp
+    test/unit/knot_vector.cpp)
 
 set(SHARED_LIBRARY ${PROJECT_NAME_LOWER}-${VERSION})
 set(STATIC_LIBRARY ${PROJECT_NAME_LOWER}-static-${VERSION})

@@ -7,10 +7,10 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
 */
 
-#ifndef SPLINTER_BSPLINEBUILDER_H
-#define SPLINTER_BSPLINEBUILDER_H
+#ifndef SPLINTER_BSPLINE_BUILDER_H
+#define SPLINTER_BSPLINE_BUILDER_H
 
-#include "datatable.h"
+#include "data_table.h"
 #include "bspline.h"
 
 namespace SPLINTER
@@ -130,4 +130,4 @@ private:
 
 } // namespace SPLINTER
 
-#endif // SPLINTER_BSPLINEBUILDER_H
+#endif // SPLINTER_BSPLINE_BUILDER_H
